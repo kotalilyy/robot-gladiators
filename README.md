@@ -19,4 +19,4 @@ I used GitHub issues to gauge when I created a Minimal Viable Product (MVP)
 
 Made with ❤️ by Dakota Nelson
 
-Thanks @@Xandromus  for the files! 
+Thanks @Xandromus  for the files! 
