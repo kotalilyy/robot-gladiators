@@ -11,7 +11,7 @@ cool, huh? */
 //    * Defeat each enemy-robot
 // "LOSE" - Player robot's health is zero or less
 
-var playerName = window.prompt("What is your robot's name?")
+var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
@@ -38,8 +38,8 @@ console.log(enemyNames[3]);
   // remove enemy's health by subtracting the amount set in the playerAttack variable
   enemyHealth = enemyHealth - playerAttack;
   console.log(
-  playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
-  ;
+  playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining.");
+  
 
   //check enemy's health
   if (enemyHealth <= 0) {
@@ -85,5 +85,5 @@ console.log(enemyNames[3]);
   };
 
   // run fight function to start game
-  fight ();
+  fight();
   
