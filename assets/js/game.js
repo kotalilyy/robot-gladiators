@@ -1,4 +1,18 @@
+/* you can
+write 
+longer
+comments
+like this
+cool, huh? */
+
+//Game States// "WIN" - Player robot has defeated all enemy-robots
+// "WIN" - Player robot has defeated all enemy-robots
+//    * Fight all enemy-robots
+//    * Defeat each enemy-robot
+// "LOSE" - Player robot's health is zero or less
+
 // var playerName = 'Clank Mckrank';
+
 var playerName = window.prompt("What is your robot's name?")
 var playerHealth = 100;
 var playerAttack = 10;
