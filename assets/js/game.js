@@ -25,14 +25,13 @@ console.log(enemyNames.length);
 console.log(enemyNames[0]);
 console.log(enemyNames[3]);
 
-for(var i = 0; i < enemyNames.length; i++) {
-  console.log(enemyNames [i]);
-  console.log(i);
-  console.log(enemyNames[i] + " is at " + i + "index");
-}
+
 
   //fight function
-  var fight = function() {
+  var fight = function(enemyName) 
+     // fight function statements
+  {
+
   // alert players that they are starting the round
   window.alert("Welcome to Robot Gladiators!");
   
