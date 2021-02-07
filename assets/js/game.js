@@ -30,14 +30,15 @@ var startGame = function () {
       console.log(pickedEnemyObj);
 
 
-      // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName in the parameter
-      fight(pickedEnemyName);
+      // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
+      fight(pickedEnemyObj);
     }
     // if player is not alive, break out of the loop and let endGame function run
     else {
       break;
     }
   }
+  
   // after loop ends, we are either out of playerHealth or enemies to fight, so run the endGame function
   endGame();
 };
