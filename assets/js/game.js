@@ -94,6 +94,8 @@ var fight = function (enemyName) {
       // award player money for winning
       playerMoney = playerMoney + 20;
 
+      // ask if player wants to use the store before next round
+      var storeConfirm = window.confirm('The fight is over, visit the store before the next round?');
       
       // leave while() loop since enemy is dead
       break;
