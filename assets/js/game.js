@@ -97,6 +97,11 @@ var fight = function (enemyName) {
       // ask if player wants to use the store before next round
       var storeConfirm = window.confirm('The fight is over, visit the store before the next round?');
       
+      //if yes, take them to the store () function
+      if (storeConfirm) {
+      shop();
+    }
+
       // leave while() loop since enemy is dead
       break;
     } else {
