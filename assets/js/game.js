@@ -77,7 +77,7 @@ var fight = function (enemyName) {
         window.alert(playerName + ' has decided to skip this fight. Goodbye!');
         // subtract money from playerMoney for skipping
         playerMoney = playerMoney - 10;
-        shop ();
+        shop();
         break;
       }
     }
@@ -87,6 +87,7 @@ var fight = function (enemyName) {
     console.log(
       playerName + ' attacked ' + enemyName + '. ' + enemyName + ' now has ' + enemyHealth + 'health remaining.'
     );
+    
     // check enemy's health
     if (enemyHealth <= 0) {
       window.alert(enemyName + 'has died!');
@@ -96,11 +97,11 @@ var fight = function (enemyName) {
 
       // ask if player wants to use the store before next round
       var storeConfirm = window.confirm('The fight is over, visit the store before the next round?');
-      
+
       //if yes, take them to the store () function
       if (storeConfirm) {
-      shop();
-    }
+        shop();
+      }
 
       // leave while() loop since enemy is dead
       break;
