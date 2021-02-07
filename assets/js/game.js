@@ -206,7 +206,11 @@ var enemyInfo = [
     attack: 14
   }
 ];
+var fight = function(enemy) {
+  console.log(enemy);
 
+  // other logic...
+};
 
 //start first game when page loads
 startGame();
