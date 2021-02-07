@@ -164,7 +164,7 @@ var randomNumber = function (min, max) {
   var value = Math.floor(Math.random() * (max - min) + min);
 
   return value;
-}
+};
 // player information
 
 var playerInfo = {
