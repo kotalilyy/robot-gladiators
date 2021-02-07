@@ -7,6 +7,9 @@ var enemyNames = ['Roborto', 'Amy Android', 'Robo Trumble'];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+// prints 3.141592653589793
+console.log(Math.PI);
+
 // function to start a new game
 var startGame = function () {
   //reset player stats
@@ -62,8 +65,8 @@ var endGame = function () {
 
 
 // fight function (now with parameter for enemy's name)
-var fight = function (enemyName) {
-  while (playerHealth > 0 && enemyHealth > 0) {
+var fight = function (enemy) {
+  while (playerInfo.health > 0 && enemyhealth > 0) {
     //  ask player if they'd like to fight or run
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
