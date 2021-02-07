@@ -1,6 +1,6 @@
 # Exploring the power of JavaScript
 # Robot Gladiators
-![image](https://user-images.githubusercontent.com/77229281/107131459-0b609d00-689c-11eb-9d8b-ac93342cc372.png)
+![robot-312566_1280](https://user-images.githubusercontent.com/77229281/107147382-65507980-6913-11eb-9b50-e71fa06c46a5.png)
 
 A super sleek computer game entered in the Con Solo Game Jam
 
