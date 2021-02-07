@@ -124,6 +124,8 @@ var fight = function (enemy) {
 
     var damage = randomNumber(enemy.attack - 3, enemy.attack);
 
+    playerHealth = Math.max(0, playerHealth - damage);
+
     //remove player's health by subtracting the amount set in the enemyAttack variable
     playerHealth = playerHealth - enemyAttack;
     console.log(
