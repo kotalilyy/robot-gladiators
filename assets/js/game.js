@@ -1,12 +1,10 @@
-var playerName = window.prompt("What is your robot's name?");
-var playerHealth = 100;
-var playerAttack = 10;
-var playerMoney = 10;
+/*this is
+how you write
+longer
+comments
+cool,huh?  */
 
-var enemyNames = ['Roborto', 'Amy Android', 'Robo Trumble'];
-var enemyHealth = 50;
-var enemyAttack = 12;
-
+// GAME FUNCTIONS
 
 // function to start a new game
 var startGame = function () {
@@ -38,7 +36,7 @@ var startGame = function () {
       break;
     }
   }
-  
+
   // after loop ends, we are either out of playerHealth or enemies to fight, so run the endGame function
   endGame();
 };
