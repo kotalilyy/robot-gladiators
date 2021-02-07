@@ -27,8 +27,8 @@ var startGame = function () {
       // set health for picked enemy
       pickedEnemyObj.health = randomNumber(40, 60);
 
-       console.log(pickedEnemyObj);
-      
+      console.log(pickedEnemyObj);
+
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName in the parameter
       fight(pickedEnemyName);
@@ -90,7 +90,7 @@ var fight = function (enemy) {
     console.log(
       playerName + ' attacked ' + enemyName + '. ' + enemyName + ' now has ' + enemyHealth + 'health remaining.'
     );
-    
+
     // check enemy's health
     if (enemyHealth <= 0) {
       window.alert(enemyName + 'has died!');
@@ -166,10 +166,10 @@ var shop = function () {
 };
 
 //function to generate a random numeric value 
-var randomNumber = function(min, max) {
+var randomNumber = function (min, max) {
   var value = Math.floor(Math.random() * (max - min) + min);
-  
-return value;
+
+  return value;
 }
 // player information
 var playerInfo = {
@@ -181,7 +181,19 @@ var playerInfo = {
     this.health = 100;
     this.money = 10;
     this.attack = 10;
-}
+  };
+  refillHealth: function () {
+    window.alert("Refilling player's health by 20 for 7 dollars.");
+    this.attack += 20;
+    this.money -= 7;
+  },
+  upgradeAttack: function () {
+    window.alert("Upgrading player's attack by 6 for 7 dollars.");
+    this.attack += 6;
+    this.money -= 7;
+  }
+};
+
 
 
 //start first game when page loads
