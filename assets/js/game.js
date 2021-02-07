@@ -23,6 +23,9 @@ var startGame = function () {
       // pick new enemy to fight based on the index of the enemyNames array
       var pickedEnemyName = enemyNames[i];
 
+      //set health for picked enemy
+      pickedEnemyObj.health = randomNumber(40, 60);
+
       // reset enemyHealth before starting new fight
       enemyHealth = 50;
 
