@@ -111,6 +111,8 @@ var fight = function (enemy) {
       window.alert(enemyName + ' still has ' + enemyHealth + 'health left.');
     }
 
+    var damage = randomNumber(enemy.attack - 3, enemy.attack);
+
     //remove player's health by subtracting the amount set in the enemyAttack variable
     playerHealth = playerHealth - enemyAttack;
     console.log(
@@ -159,6 +161,13 @@ var shop = function () {
       break;
   }
 };
+
+//function to generate a random numeric value 
+var randomNumber = function(min, max) {
+  var value = Math.floor(Math.random() * (max - min) + min);
+  
+return value;
+}
 
 //start first game when page loads
 startGame();
