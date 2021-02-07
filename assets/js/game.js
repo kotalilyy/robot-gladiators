@@ -15,7 +15,7 @@ var startGame = function () {
   for (var i = 0; i < enemyInfo.length; i++) {
     // if player is still alive, keep fighting the next enemy
     if (playerHealth > 0) {
-    //let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
+      //let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
       window.alert('Welcome to Robot Gladiators! Round ' + (i + 1));
 
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
@@ -73,14 +73,14 @@ var fight = function (enemy) {
       }
     }
 
-var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
+    var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
     // remove enemy's health by subtracting the amount we set in the damage variable
     enemyHealth = Math.max(0, enemy.health - damage);
     console.log(
       playerInfo.name +
       ' attacked ' +
-      enemy.name + 
+      enemy.name +
       ' now has ' +
       enemy.health +
       ' health remaining. '
@@ -116,7 +116,7 @@ var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
       ' attacked ' +
       playerInfo.name +
       ' now has ' +
-      playerInfo.health + 
+      playerInfo.health +
       ' health remaining.'
     );
 
@@ -166,7 +166,6 @@ var randomNumber = function (min, max) {
   return value;
 };
 // player information
-
 var playerInfo = {
   name: window.prompt("What is your robot's name?"),
   health: 100,
@@ -197,7 +196,7 @@ vary enemyInfo = [
   },
   {
     name: 'Amy Android',
-    attack: randomNumber(10,14)
+    attack: randomNumber(10, 14)
   },
   {
     name: 'Robo Trumble',
