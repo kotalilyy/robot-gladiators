@@ -193,7 +193,20 @@ var playerInfo = {
     this.money -= 7;
   }
 };
-
+var enemyInfo = [
+  {
+    name: "Roborto",
+    attack: 12
+  },
+  {
+    name: "Amy Android",
+    attack: 13
+  },
+  {
+    name: "Robo Trumble",
+    attack: 14
+  }
+];
 
 
 //start first game when page loads
