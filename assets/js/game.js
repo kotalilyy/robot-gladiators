@@ -52,8 +52,7 @@ var endGame = function () {
   }
 };
 
-
-// fight function (now with parameter for enemy's name)
+// fight function (now with parameter for enemy's objext holding name, health, and attack values)
 var fight = function (enemy) {
   while (playerInfo.health > 0 && enemyhealth > 0) {
     //  ask player if they'd like to fight or run
@@ -73,6 +72,8 @@ var fight = function (enemy) {
         break;
       }
     }
+
+var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
     // remove enemy's health by subtracting the amount set in the playerAttack variable
     enemyHealth = enemyHealth - playerAttack;
