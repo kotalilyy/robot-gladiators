@@ -143,15 +143,11 @@ var shop = function () {
   switch (shopOptionPrompt) {
     case 'refill':
     case 'REFILL':
-      window.alert("Refilling player's health by 20 for 7 dollars.");
-      playerHealth += 20;
-      playerMoney -= 7;
+      playerInfo.refillHealth();
       break;
     case 'upgrade':
     case 'UPGRADE':
-      window.alert("Upgrading player's health by 20 for 7 dollars.");
-      playerAttack += 6;
-      playerMoney -= 7;
+      playerInfo.upgradeAttack();
       break;
     case 'leave':
     case 'LEAVE':
@@ -171,6 +167,7 @@ var randomNumber = function (min, max) {
   return value;
 }
 // player information
+
 var playerInfo = {
   name: window.prompt("What is your robot's name?"),
   health: 100,
