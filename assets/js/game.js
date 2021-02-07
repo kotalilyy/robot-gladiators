@@ -192,18 +192,20 @@ var playerInfo = {
     this.money -= 7;
   }
 };
-var enemyInfo = [
+
+//enemy information
+vary enemyInfo = [
   {
-    name: "Roborto",
-    attack: 12
+    name: 'Roborto',
+    attack: randomNumber(10, 14)
   },
   {
-    name: "Amy Android",
-    attack: 13
+    name: 'Amy Android',
+    attack: randomNumber(10,14)
   },
   {
-    name: "Robo Trumble",
-    attack: 14
+    name: 'Robo Trumble',
+    attack: randomNumber(10, 14)
   }
 ];
 
