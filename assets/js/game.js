@@ -18,15 +18,6 @@ var startGame = function () {
     //let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
       window.alert('Welcome to Robot Gladiators! Round ' + (i + 1));
 
-      // pick new enemy to fight based on the index of the enemyNames array
-      var pickedEnemyObj.health = enemyInfo[i];
-
-      // set health for picked enemy
-      pickedEnemyObj.health = randomNumber(40, 60);
-
-      console.log(pickedEnemyObj);
-
-
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
       fight(pickedEnemyObj);
     }
@@ -57,7 +48,7 @@ var endGame = function () {
   if (playAgainConfirm) {
     startGame();
   } else {
-    window.alert("Thank you for playing Battleboys! Come back soon!");
+    window.alert("Thank you for playing Battlebots! Come back soon!");
   }
 };
 
