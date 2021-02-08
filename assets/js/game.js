@@ -24,8 +24,8 @@ var startGame = function () {
       // set health for picked enemy
       pickedEnemyObj.health = randomNumber(40, 60);
 
-      console.log*pickedEnemyObj); 
-      
+      console.log(pickedEnemyObj); 
+
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
       fight(pickedEnemyObj);
     }
@@ -35,7 +35,7 @@ var startGame = function () {
     }
   }
 
-  // after loop ends, we are either out of playerHealth or enemies to fight, so run the endGame function
+  // after loop ends, we are either out of player.health or enemies to fight, so run the endGame function
   endGame();
 };
 
