@@ -95,7 +95,7 @@ var fight = function(enemy) {
     );
 
     // check enemy's health
-    if (enemyHealth <= 0) {
+    if (enemy.health <= 0) {
       window.alert(enemyName + 'has died!');
 
       // award player money for winning
