@@ -21,7 +21,11 @@ var startGame = function () {
       // pick new enemy to fight based on the index of the enemyInfo array
       var pickedEnemyObj = enemyInfo[i];
 
+      // set health for picked enemy
+      pickedEnemyObj.health = randomNumber(40, 60);
 
+      console.log*pickedEnemyObj); 
+      
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
       fight(pickedEnemyObj);
     }
