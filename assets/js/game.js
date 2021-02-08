@@ -24,7 +24,7 @@ var startGame = function () {
       // set health for picked enemy
       pickedEnemyObj.health = randomNumber(40, 60);
 
-      console.log(pickedEnemyObj); 
+      console.log(pickedEnemyObj);
 
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
       fight(pickedEnemyObj);
@@ -61,7 +61,7 @@ var endGame = function () {
 };
 
 // fight function (now with parameter for enemy's objext holding name, health, and attack values)
-var fight = function(enemy) {
+var fight = function (enemy) {
   while (playerInfo.health > 0 && enemy.health > 0) {
     //  ask player if they'd like to fight or run
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
