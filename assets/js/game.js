@@ -124,6 +124,8 @@ var fight = function(enemy) {
       ' attacked ' +
       playerInfo.name +
       '. ' +
+      playerInfo.name +
+      ' now has ' +
       playerInfo.health +
       ' health remaining.'
     );
