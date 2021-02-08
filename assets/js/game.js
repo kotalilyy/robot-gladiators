@@ -175,6 +175,7 @@ var randomNumber = function (min, max) {
 
   return value;
 };
+
 // player information
 var playerInfo = {
   name: window.prompt("What is your robot's name?"),
@@ -188,8 +189,8 @@ var playerInfo = {
   },
   refillHealth: function () {
     window.alert("Refilling player's health by 20 for 7 dollars.");
-    this.attack += 20;
-    this.money -= 7;
+    this.health += 20;
+    this.attack -= 7;
   },
   upgradeAttack: function () {
     window.alert("Upgrading player's attack by 6 for 7 dollars.");
