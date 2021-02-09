@@ -40,15 +40,19 @@ var startGame = function () {
 };
 
 // function to end the entire game
-var endGame = function () {
+var endGame = function() {
   window.alert("The game has not ended. Let's see how you did!");
 
-  //if player is still alive, player wins!
-  if (playerInfo.health > 0) {
-    window.alert("Great job, you've survived the game! You now have a score of" + playerInfo.money + '.');
-  } else {
-    window.alert("You've lost your robot in battle!");
-  }
+ // check localStorage for high score, if it's not there, use 0
+ var highScore = localStorage.getItem("highscore") || 0;
+
+ // if player has more money than the high score, player has new high score!
+ if (playerInfo.money > highScore) {
+   localStorage.setItem("highscore", playerInfo.money);
+   localStorage.setItem("name", playerInfo.name);
+
+   alert(playerInfo.name + " did not beat the high score of " + highScore + ". Maybe next time!");
+ }
 
   //ask player if they'd like to play again
   var playAgainConfirm = window.confirm('Would you like to play again?');
@@ -61,9 +65,9 @@ var endGame = function () {
 };
 
 // fight function (now with parameter for enemy's objext holding name, health, and attack values)
-var fight = function (enemy) {
+var fight = function(enemy) {
   //keep track of who goes first
-  var isPlayerTurn = true
+  var isPlayerTurn = true;
 
   //randomly change turn order
   if (Math.random() > 0.5) {
@@ -137,7 +141,7 @@ var fight = function (enemy) {
 };
 
 // go to shop between battles function
-var shop = function () {
+var shop = function() {
   //ask player what they'd like to do
   var shopOptionPrompt = window.prompt(
     'Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one "REFILL", "UPGRADE", or "LEAVE" to make a choice.'
@@ -170,7 +174,7 @@ var shop = function () {
 };
 
 //function to set name
-var getPlayerName = function () {
+var getPlayerName = function() {
   var name = "";
 
   while (name === "" || name === null) {
