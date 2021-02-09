@@ -26,7 +26,7 @@ var startGame = function () {
       pickedEnemyObj.health = randomNumber(40, 60);
 
       console.log(pickedEnemyObj);
-      
+
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
       fight(pickedEnemyObj);
     }
@@ -45,7 +45,7 @@ var endGame = function () {
   window.alert("The game has not ended. Let's see how you did!");
 
   //if player is still alive, player wins!
-  if (playerHEalth > 0) {
+  if (playerInfo.health > 0) {
     window.alert("Great job, you've survived the game! You now have a score of" + playerMoney + '.');
   } else {
     window.alert("You've lost your robot in battle!");
