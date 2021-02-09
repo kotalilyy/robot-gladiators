@@ -31,7 +31,7 @@ var startGame = function () {
 
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
       fight(pickedEnemyObj);
-    }
+    
     // if player is not alive, break out of the loop and let endGame function run
     else {
       break;
