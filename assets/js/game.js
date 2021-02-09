@@ -201,6 +201,26 @@ var randomNumber = function (min, max) {
 
   return value;
 };
+var fightOrSkip = function() {
+  // ask player if they'd like to fight or skip using fightOrSkip function
+  var promptFight = window.prompt('Would you like FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
+
+  // Enter the conditional recursive function call here!
+
+  // if player picks "skip" confirm and then stop the loop
+  if (promptFight === "skip" || promptFight === "SKIP") {
+    // confirm player wants to skip
+    var confirmSkip = window.confirm("Are you sure you'd like to quit?");
+
+    // if yes (true), leave fight
+    if (confirmSkip) {
+      window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
+      // subtract money from playerMoney for skipping
+      playerInfo.playerMoney = playerInfo.money - 10;
+      shop();
+    }
+  }
+}
 
 // player information
 var playerInfo = {
@@ -216,11 +236,7 @@ var playerInfo = {
   refillHealth: function () {
     window.alert("Refilling player's health by 20 for 7 dollars.");
     this.health += 20;
-<<<<<<< HEAD
     this.money -= 7;
-=======
-    this.attack -= 7;
->>>>>>> bug/player-name
   },
   upgradeAttack: function () {
     window.alert("Upgrading player's attack by 6 for 7 dollars.");
