@@ -248,7 +248,7 @@ var playerInfo = {
 //enemy information
 var enemyInfo = [
   {
-    name: 'Roborto',
+    name: "Roborto",
     attack: randomNumber(10, 14)
   },
   {
