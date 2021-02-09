@@ -151,7 +151,6 @@ var shop = function () {
   );
 
 // use switch case to carry out action
-debugger;
 switch (shopOptionPrompt) {
   case 1:
     playerInfo.refillHealth();
