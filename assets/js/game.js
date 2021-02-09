@@ -217,7 +217,11 @@ var fightOrSkip = function() {
   //convert promptFight to all lowercase so we can check with less options
   promptFight = promptFight.toLowerCase();
 
-  
+  if (promptFight === "skip") {
+    //confirm player wants to skip
+    var confirmSkip = window.confirm("Are you sure you'd like to quit?");
+
+
 // player information
 var playerInfo = {
   name: getPlayerName (),
