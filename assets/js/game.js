@@ -252,7 +252,7 @@ var enemyInfo = [
     attack: randomNumber(10, 14)
   },
   {
-    name: 'Amy Android',
+    name: "Amy Android",
     attack: randomNumber(10, 14)
   },
   {
