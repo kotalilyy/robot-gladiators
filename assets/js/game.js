@@ -224,7 +224,12 @@ var fightOrSkip = function() {
     //if yes (true), leave fight
     if (confirmSkip) {
       window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
-      
+      //subtract money from playerMoney for skipping, but don't let them go into the negative
+      playerInfo.money = Math.max(0, playerInfo.money - 10);
+      // stop while () loop using break; and enter next fight
+
+      // return true if player wants to leave
+      return true;
 
 
 // player information
