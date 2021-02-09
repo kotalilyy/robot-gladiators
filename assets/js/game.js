@@ -192,7 +192,7 @@ var playerInfo = {
   },
   refillHealth: function () {
     window.alert("Refilling player's health by 20 for 7 dollars.");
-    this.attack += 20;
+    this.health += 20;
     this.money -= 7;
   },
   upgradeAttack: function () {
