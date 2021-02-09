@@ -14,10 +14,19 @@ var startGame = function () {
   //fight each enemy robot by looping over them and fighting them one at a time
   for (var i = 0; i < enemyInfo.length; i++) {
     // if player is still alive, keep fighting the next enemy
-    if (playerHealth > 0) {
+    if (playerInfo.health > 0) {
       //let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
       window.alert('Welcome to Robot Gladiators! Round ' + (i + 1));
 
+
+      // pick new enemy to fight based on the index of the enemyInfo array
+      var pickedEnemyObj = enemyInfo[i];
+
+      //set health for picked enemy 
+      pickedEnemyObj.health = randomNumber(40, 60);
+
+      console.log(pickedEnemyObj);
+      
       // pass the pickedEnemyObj object variable's value into the fight function, where it will assume the value of the enemy parameter
       fight(pickedEnemyObj);
     }
