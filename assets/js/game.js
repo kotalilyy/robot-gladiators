@@ -189,7 +189,7 @@ var randomNumber = function (min, max) {
 };
 
 //function to check if player wants to fight or skip
-var fightOrSkip = function () {
+var fightOrSkip = function() {
   //ask player if they'd like to fight or run
   var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
