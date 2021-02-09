@@ -221,6 +221,11 @@ var fightOrSkip = function() {
     //confirm player wants to skip
     var confirmSkip = window.confirm("Are you sure you'd like to quit?");
 
+    //if yes (true), leave fight
+    if (confirmSkip) {
+      window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
+      
+
 
 // player information
 var playerInfo = {
