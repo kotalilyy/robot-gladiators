@@ -1,7 +1,7 @@
 // GAME FUNCTIONS
 
 // function to start a new game
-var startGame = function () {
+var startGame = function() {
   //reset player stats
   playerInfo.reset();
 
