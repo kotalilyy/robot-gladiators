@@ -1,9 +1,3 @@
-/*this is
-how you write
-longer
-comments
-cool,huh?  */
-
 // GAME FUNCTIONS
 
 // function to start a new game
