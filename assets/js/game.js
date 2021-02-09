@@ -59,6 +59,8 @@ var endGame = function() {
    localStorage.setItem("highscore", playerInfo.money);
    localStorage.setItem("name", playerInfo.name);
 
+   alert(playerInfo.name + " now has the high score of " + playerInfo.money + "!");
+ } else {
    alert(playerInfo.name + " did not beat the high score of " + highScore + ". Maybe next time!");
  }
 
