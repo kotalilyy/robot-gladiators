@@ -117,7 +117,7 @@ var fight = function (enemy) {
       playerInfo.name +
       '. ' +
       playerInfo.name +
-      ' now has ' +
+      " now has " +
       playerInfo.health +
       ' health remaining.'
     );
