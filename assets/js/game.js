@@ -69,20 +69,14 @@ var fight = function (enemy) {
   if (Math.random() > 0.5) {
     isPlayerTurn = false;
   }
-    // if player picks "skip" confirm and then stop the loop
-    if (promptFight === "skip" || promptFight === "SKIP") {
-      // confirm player wants to skip
-      var confirmSkip = window.confirm("Are you sure you'd like to quit?")
-
-      // if yes (true), leave fight
-      if (confirmSkip) {
-        window.alert(playerName + ' has decided to skip this fight. Goodbye!');
-        // subtract money from playerMoney for skipping
-        playerMoney = playerMoney - 10;
-        shop();
+  
+  while (playerInfo.health > 0 && enemy.health > 0) {
+    if (isPlayerTurn) {
+      // ask player if they'd like to fight or skip using fightOrSkip
+      if (fightOrSkip()) {
+        //if true, leave fight by breaking loop
         break;
-      }
-    }
+     
 
     var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
