@@ -150,29 +150,26 @@ var shop = function () {
     'Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one "REFILL", "UPGRADE", or "LEAVE" to make a choice.'
   );
 
-  // use switch case to carry out action
-  switch (shopOptionPrompt) {
-    case 'refill':
-    case 'REFILL':
-      playerInfo.refillHealth();
-      break;
-    case 'upgrade':
-    case 'UPGRADE':
+// use switch case to carry out action
+switch (shopOptionPrompt) {
+  case 1:
+    playerInfo.refillHealth();
+    break;
+    case 2:
       playerInfo.upgradeAttack();
       break;
-    case 'leave':
-    case 'LEAVE':
-      window.alert('Leaving the store.');
-      break;
-    default:
-      window.alert('You did not pick a valid option. Try again.');
-      shop();
-      break;
-  }
+      case 3:
+        window.alert("Leaving the store.");
+        break;
+        default:
+          window.alert("You did not pick a valid option. Try again.");
+          shop();
+          break;
+}
 };
 
 //function to set name
-var getPlayerName = function() {
+var getPlayerName = function () {
   var name = "";
 
   while (name === "" || name === null) {
@@ -191,7 +188,7 @@ var randomNumber = function (min, max) {
 };
 
 //function to check if player wants to fight or skip
-var fightOrSkip = function() {
+var fightOrSkip = function () {
   //ask player if they'd like to fight or run
   var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
@@ -220,13 +217,13 @@ var fightOrSkip = function() {
       return true;
     }
   }
-  return false; 
+  return false;
 };
 
 
 // player information
 var playerInfo = {
-  name: getPlayerName (),
+  name: getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
