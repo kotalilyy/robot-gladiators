@@ -142,7 +142,7 @@ var fight = function(enemy) {
         // leave while() loop if player is dead
         break;
       } else {
-        window.alert(playerInfo.name + " still has " + playerInfo.health + " health left ");
+        window.alert(playerInfo.name + " still has " + playerInfo.health + " health left.");
       }
     }
     // switch turn order for next round
