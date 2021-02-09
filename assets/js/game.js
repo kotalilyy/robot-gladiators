@@ -90,6 +90,8 @@ var fight = function(enemy) {
       playerInfo.name +
       ' attacked ' +
       enemy.name +
+      '. ' +
+      enemy.name +
       ' now has ' +
       enemy.health +
       ' health remaining. '
