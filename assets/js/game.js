@@ -84,43 +84,36 @@ var fight = function (enemy) {
     enemy.health = Math.max(0, enemy.health - damage);
     console.log(
       playerInfo.name +
-      ' attacked ' +
+      " attacked " +
       enemy.name +
-      '. ' +
+      ". " +
       enemy.name +
-      ' now has ' +
+      " now has " +
       enemy.health +
-      ' health remaining. '
+      " health remaining "
     );
 
     // check enemy's health
     if (enemy.health <= 0) {
-      window.alert(enemy.name + 'has died!');
+      window.alert(enemy.name + " has died! ");
 
       // award player money for winning
       playerInfo.money = playerInfo.money + 20;
 
-      // ask if player wants to use the store before next round
-      var storeConfirm = window.confirm('The fight is over, visit the store before the next round?');
-
-      //if yes, take them to the store () function
-      if (storeConfirm) {
-        shop();
-      }
-
       // leave while() loop since enemy is dead
       break;
     } else {
-      window.alert(enemy.name + ' still has ' + enemy.health + 'health left.');
+      window.alert(enemy.name + " still has " + enemy.health + " health left.");
     }
-
+    // player gets attacked first 
+  } else {
     var damage = randomNumber(enemy.attack - 3, enemy.attack);
 
     //remove enemy's health by subtracting the amount set in the damage variable
     playerInfo.health = Math.max(0, playerInfo.health - damage);
     console.log(
       enemy.name +
-      ' attacked ' +
+      " attacked " +
       playerInfo.name +
       '. ' +
       playerInfo.name +
