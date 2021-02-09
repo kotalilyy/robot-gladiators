@@ -63,13 +63,13 @@ var endGame = function () {
 // fight function (now with parameter for enemy's objext holding name, health, and attack values)
 var fight = function (enemy) {
   //keep track of who goes first
-  var isPlayerTurn = true 
-  
+  var isPlayerTurn = true
+
   //randomly change turn order
   if (Math.random() > 0.5) {
     isPlayerTurn = false;
   }
-  
+
   while (playerInfo.health > 0 && enemy.health > 0) {
     if (isPlayerTurn) {
       // ask player if they'd like to fight or skip using fightOrSkip
@@ -78,61 +78,61 @@ var fight = function (enemy) {
         break;
       }
 
-    var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
+      var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
-    // remove enemy's health by subtracting the amount we set in the damage variable
-    enemy.health = Math.max(0, enemy.health - damage);
-    console.log(
-      playerInfo.name +
-      " attacked " +
-      enemy.name +
-      ". " +
-      enemy.name +
-      " now has " +
-      enemy.health +
-      " health remaining "
-    );
+      // remove enemy's health by subtracting the amount we set in the damage variable
+      enemy.health = Math.max(0, enemy.health - damage);
+      console.log(
+        playerInfo.name +
+        " attacked " +
+        enemy.name +
+        ". " +
+        enemy.name +
+        " now has " +
+        enemy.health +
+        " health remaining "
+      );
 
-    // check enemy's health
-    if (enemy.health <= 0) {
-      window.alert(enemy.name + " has died! ");
+      // check enemy's health
+      if (enemy.health <= 0) {
+        window.alert(enemy.name + " has died! ");
 
-      // award player money for winning
-      playerInfo.money = playerInfo.money + 20;
+        // award player money for winning
+        playerInfo.money = playerInfo.money + 20;
 
-      // leave while() loop since enemy is dead
-      break;
+        // leave while() loop since enemy is dead
+        break;
+      } else {
+        window.alert(enemy.name + " still has " + enemy.health + " health left.");
+      }
+      // player gets attacked first 
     } else {
-      window.alert(enemy.name + " still has " + enemy.health + " health left.");
-    }
-    // player gets attacked first 
-  } else {
-    var damage = randomNumber(enemy.attack - 3, enemy.attack);
+      var damage = randomNumber(enemy.attack - 3, enemy.attack);
 
-    //remove enemy's health by subtracting the amount set in the damage variable
-    playerInfo.health = Math.max(0, playerInfo.health - damage);
-    console.log(
-      enemy.name +
-      " attacked " +
-      playerInfo.name +
-      '. ' +
-      playerInfo.name +
-      " now has " +
-      playerInfo.health +
-      " health remaining. "
-    );
+      //remove enemy's health by subtracting the amount set in the damage variable
+      playerInfo.health = Math.max(0, playerInfo.health - damage);
+      console.log(
+        enemy.name +
+        " attacked " +
+        playerInfo.name +
+        '. ' +
+        playerInfo.name +
+        " now has " +
+        playerInfo.health +
+        " health remaining. "
+      );
 
-    // check player's health
-    if (playerInfo.health <= 0) {
-      window.alert(playerInfo.name + " has died!");
-      // leave while() loop if player is dead
-      break;
-    } else {
-      window.alert(playerInfo.name + " still has " + playerInfo.health + " health left ");
+      // check player's health
+      if (playerInfo.health <= 0) {
+        window.alert(playerInfo.name + " has died!");
+        // leave while() loop if player is dead
+        break;
+      } else {
+        window.alert(playerInfo.name + " still has " + playerInfo.health + " health left ");
+      }
     }
-  }
-  // switch turn order for next round
-  isPlayerTurn = !isPlayerTurn;
+    // switch turn order for next round
+    isPlayerTurn = !isPlayerTurn;
   }
 };
 
@@ -146,27 +146,27 @@ var shop = function () {
   // check if prompt answer was left blank, player hit "cancel", or provided a number instead
   if (shopOptionPrompt === null || shopOptionPrompt === "" || isNaN(shopOptionPrompt)) {
     window.alert("You need to provide a valid answer! Please try again");
-    return shop ();
+    return shop();
   }
   //convert answer from prompt to an actual number
   shopOptionPrompt = parseInt(shopOptionPrompt);
 
-// use switch case to carry out action
-switch (shopOptionPrompt) {
-  case 1:
-    playerInfo.refillHealth();
-    break;
+  // use switch case to carry out action
+  switch (shopOptionPrompt) {
+    case 1:
+      playerInfo.refillHealth();
+      break;
     case 2:
       playerInfo.upgradeAttack();
       break;
-      case 3:
-        window.alert("Leaving the store.");
-        break;
-        default:
-          window.alert("You did not pick a valid option. Try again.");
-          shop();
-          break;
-}
+    case 3:
+      window.alert("Leaving the store.");
+      break;
+    default:
+      window.alert("You did not pick a valid option. Try again.");
+      shop();
+      break;
+  }
 };
 
 //function to set name
