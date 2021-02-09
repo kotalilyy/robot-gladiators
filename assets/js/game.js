@@ -203,7 +203,7 @@ var playerInfo = {
 };
 
 //enemy information
-vary enemyInfo = [
+var enemyInfo = [
   {
     name: 'Roborto',
     attack: randomNumber(10, 14)
