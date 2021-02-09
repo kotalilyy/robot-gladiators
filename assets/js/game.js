@@ -256,7 +256,7 @@ var enemyInfo = [
     attack: randomNumber(10, 14)
   },
   {
-    name: 'Robo Trumble',
+    name: "Robo Trumble",
     attack: randomNumber(10, 14)
   }
 ];
