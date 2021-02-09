@@ -76,7 +76,7 @@ var fight = function (enemy) {
       if (fightOrSkip()) {
         //if true, leave fight by breaking loop
         break;
-     
+      }
 
     var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
