@@ -104,7 +104,7 @@ var fight = function(enemy) {
         enemy.name +
         " now has " +
         enemy.health +
-        " health remaining "
+        " health remaining. "
       );
 
       // check enemy's health
