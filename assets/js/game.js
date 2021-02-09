@@ -201,26 +201,18 @@ var randomNumber = function (min, max) {
 
   return value;
 };
+
+//function to check if player wants to fight or skip
 var fightOrSkip = function() {
-  // ask player if they'd like to fight or skip using fightOrSkip function
-  var promptFight = window.prompt('Would you like FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
+  //ask player if they'd like to fight or run
+  var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
-  // Enter the conditional recursive function call here!
-
-  // if player picks "skip" confirm and then stop the loop
-  if (promptFight === "skip" || promptFight === "SKIP") {
-    // confirm player wants to skip
-    var confirmSkip = window.confirm("Are you sure you'd like to quit?");
-
-    // if yes (true), leave fight
-    if (confirmSkip) {
-      window.alert(playerInfo.name + " has decided to skip this fight. Goodbye!");
-      // subtract money from playerMoney for skipping
-      playerInfo.playerMoney = playerInfo.money - 10;
-      shop();
-    }
+  //validate prompt answer
+  if (promptFight === "" || promptFight === null || !isNaN(promptFight)) {
+    window.alert("You didn't enter a valid choice, try again!");
+    //use return to call it again and stop the rest of this fucntion from running
+    return fightOrSkip();
   }
-}
 
 // player information
 var playerInfo = {
