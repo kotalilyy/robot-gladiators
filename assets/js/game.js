@@ -214,6 +214,10 @@ var fightOrSkip = function() {
     return fightOrSkip();
   }
 
+  //convert promptFight to all lowercase so we can check with less options
+  promptFight = promptFight.toLowerCase();
+
+  
 // player information
 var playerInfo = {
   name: getPlayerName (),
