@@ -243,7 +243,7 @@ var playerInfo = {
   health: 100,
   attack: 10,
   money: 10,
-  reset: function () {
+  reset: function() {
     this.health = 100;
     this.money = 10;
     this.attack = 10;
@@ -258,6 +258,7 @@ var playerInfo = {
     }
   },
   upgradeAttack: function() {
+    if (this.money >= 7){
     window.alert("Upgrading player's attack by 6 for 7 dollars.");
     this.attack += 6;
     this.money -= 7;
