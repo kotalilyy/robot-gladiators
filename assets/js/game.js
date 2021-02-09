@@ -18,11 +18,18 @@ var startGame = function () {
       //let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
       window.alert('Welcome to Robot Gladiators! Round ' + (i + 1));
 
+<<<<<<< HEAD
 
       // pick new enemy to fight based on the index of the enemyInfo array
       var pickedEnemyObj = enemyInfo[i];
 
       //set health for picked enemy 
+=======
+      // pick new enemy to fight based on the index of the enemyInfo array
+      var pickedEnemyObj = enemyInfo[i];
+
+      // set health for picked enemy
+>>>>>>> bug/player-name
       pickedEnemyObj.health = randomNumber(40, 60);
 
       console.log(pickedEnemyObj);
@@ -36,7 +43,7 @@ var startGame = function () {
     }
   }
 
-  // after loop ends, we are either out of playerHealth or enemies to fight, so run the endGame function
+  // after loop ends, we are either out of player.health or enemies to fight, so run the endGame function
   endGame();
 };
 
@@ -62,7 +69,11 @@ var endGame = function () {
 };
 
 // fight function (now with parameter for enemy's objext holding name, health, and attack values)
+<<<<<<< HEAD
 var fight = function(enemy) {
+=======
+var fight = function (enemy) {
+>>>>>>> bug/player-name
   while (playerInfo.health > 0 && enemy.health > 0) {
     //  ask player if they'd like to fight or run
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
@@ -172,6 +183,18 @@ var shop = function () {
   }
 };
 
+//function to set name
+var getPlayerName = function() {
+  var name = "";
+
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+  console.log("Your robot's name is " + name);
+  return name;
+};
+
+
 //function to generate a random numeric value 
 var randomNumber = function (min, max) {
   var value = Math.floor(Math.random() * (max - min) + min);
@@ -181,7 +204,7 @@ var randomNumber = function (min, max) {
 
 // player information
 var playerInfo = {
-  name: window.prompt("What is your robot's name?"),
+  name: getPlayerName (),
   health: 100,
   attack: 10,
   money: 10,
@@ -193,7 +216,11 @@ var playerInfo = {
   refillHealth: function () {
     window.alert("Refilling player's health by 20 for 7 dollars.");
     this.health += 20;
+<<<<<<< HEAD
     this.money -= 7;
+=======
+    this.attack -= 7;
+>>>>>>> bug/player-name
   },
   upgradeAttack: function () {
     window.alert("Upgrading player's attack by 6 for 7 dollars.");
