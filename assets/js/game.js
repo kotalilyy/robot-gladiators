@@ -159,7 +159,7 @@ var shop = function() {
 
   // check if prompt answer was left blank, player hit "cancel", or provided a number instead
   if (shopOptionPrompt === null || shopOptionPrompt === "" || isNaN(shopOptionPrompt)) {
-    window.alert("You need to provide a valid answer! Please try again");
+    window.alert("You need to provide a valid answer! Please try again.");
     return shop();
   }
   //convert answer from prompt to an actual number
