@@ -150,6 +150,14 @@ var shop = function () {
     'Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one "REFILL", "UPGRADE", or "LEAVE" to make a choice.'
   );
 
+  // check if prompt answer was left blank, player hit "cancel", or provided a number instead
+  if (shopOptionPrompt === null || shopOptionPrompt === "" || isNaN(shopOptionPrompt)) {
+    window.alert("You need to provide a valid answer! Please try again");
+    return shop ();
+  }
+  //convert answer from prompt to an actual number
+  shopOptionPrompt = parseInt(shopOptionPrompt);
+
 // use switch case to carry out action
 switch (shopOptionPrompt) {
   case 1:
