@@ -34,7 +34,15 @@ var startGame = function () {
 
       // if player is still alive after the fight and we're not at the last enemy in the array
       if (playerInfo.health > 0 && i < enemyInfo.length - 1) {
-    
+        //ask if player wants to use the store before next round
+        var storeConfirm = window.confirm("The fight is over, visit the store before the next round?");
+
+        // if yes, take them to the store () function
+        if (storeConfirm) {
+          shop();
+        }
+      }
+    }
     // if player is not alive, break out of the loop and let endGame function run
     else {
       break;
