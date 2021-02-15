@@ -1,6 +1,6 @@
 # Exploring the power of JavaScript
 # Robot Gladiators
-![robot-312566_1280](https://user-images.githubusercontent.com/77229281/107160422-b1bfa780-695b-11eb-94b1-8517255639d7.png)
+![robot](https://user-images.githubusercontent.com/77229281/107952366-48452780-6f5f-11eb-90cf-1952ec06b692.png)
 
 
 
