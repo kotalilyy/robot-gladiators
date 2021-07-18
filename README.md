@@ -1,4 +1,4 @@
-# My very first Javascript Repo
+# My very first JavaScript repo
 
 ## Robot Gladiators
 
@@ -6,16 +6,12 @@
 
 ## Description
 
-A super sleek computer game entered in the Con Solo Game Jam
-
-No Graphics - No Css - No teams
-
 I created a battle simulator. The player names their robot and fights a series of robot enemies. During each round, the player can choose whether to fight or whether to choose to buy repairs and upgrades at the shop. The game runs in the Chrome Dev Tools console.
 
 I learned how to loop over arrays, and how to use GitHub issues to gauge when I created a Minimal Viable Product (MVP)
 
 # Contributions
 
-Made with ❤️ by Dakota Nelson
+Created with ❤️ by Dakota Nelson
 
 Thanks @[Xandromus](https://github.com/Xandromus) for the files! 
