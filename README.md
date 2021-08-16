@@ -6,6 +6,10 @@
 
 I created a battle simulator.
 
-# Contributions
+## Contributions
 
 Created with ❤️ by Dakota Nelson
+
+## Credits
+
+Shoutout to [Flaticon](https://www.flaticon.com/)
